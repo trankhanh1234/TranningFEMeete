@@ -6,6 +6,7 @@ const dataVocher = [
     content: "",
     address: "",
     voucher: "",
+    status: "Chưa dùng",
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ const dataVocher = [
     content: "",
     address: "",
     voucher: "",
+    status: "Đã dùng",
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ const dataVocher = [
     content: "",
     address: "",
     voucher: "",
+    status: "Đã dùng",
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ const dataVocher = [
     content: "",
     address: "",
     voucher: "",
+    status: "Chưa dùng",
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ const dataVocher = [
     content: "",
     address: "",
     voucher: "",
+    status: "Đã dùng",
   },
   {
     id: 6,
@@ -46,8 +51,11 @@ const dataVocher = [
     content: "",
     address: "",
     voucher: "",
+    status: "Đã dùng",
   },
 ];
+
+const statusVocher = ["Đã dùng", "chưa dùng"];
 
 var voucher = document.getElementById("listProduct");
 
@@ -124,7 +132,9 @@ function getListVocher() {
       >
         Ngày đặt hàng 25-05-2020
       </div>
-      <div class="mt-status-deal">Chưa dùng</div>
+      <div class="mt-status-deal">` +
+      item.status +
+      `</div>
     </div>
   </a>`;
   });
