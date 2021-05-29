@@ -22,6 +22,19 @@ a {
 
 /* ============= 01. header============= */
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 16;
+  width: 100%;
+}
+
+header.is-sticky {
+  transform: "translateY(-89px)";
+  visibility: "hidden";
+}
+
 .mt-header-header {
   width: 100%;
   padding: 1.5rem 1rem !important;
@@ -72,7 +85,9 @@ img {
 body {
   background: #f4f6f9;
 }
-
+main {
+  padding-top: 89px;
+}
 .MuiBreadcrumbs-ol {
   margin: 0;
   display: flex;

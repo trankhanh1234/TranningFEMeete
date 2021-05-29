@@ -37,13 +37,10 @@ const listVoucher = [
   },
 ];
 
-const statusVocher = ["Đã dùng", "chưa dùng"];
-
 var voucher = document.getElementById("listProduct");
 
 function getListVocher() {
   listVoucher.forEach((item) => {
-    console.log(item.id);
     voucher.innerHTML += `<a id="${item.id}" class="w-100">
     <div class="mt-container-item-deal bg-white my-2 rounder">
       <div class="mt-top-info">
@@ -116,5 +113,19 @@ function getListVocher() {
   </a>`;
   });
 }
+
+let lastScrollTop = 0;
+window.addEventListener("scroll", function () {
+  const st = document.documentElement.scrollTop;
+
+  if (st > lastScrollTop) {
+    if (st >= 200) {
+      document.getElementById("navbar").style.display = "none";
+    }
+  } else {
+    document.getElementById("navbar").style.display = "block";
+  }
+  lastScrollTop = st;
+});
 
 getListVocher();
